@@ -9,6 +9,7 @@ todos = [
     { "label": "My first task", "done": False },
     { "label": "My second task", "done": False }
 ]
+
 @app.route('/todos', methods=['GET'])
 def hello_world():
      return jsonify(todos)
@@ -27,20 +28,6 @@ def delete_todo(position):
     todos.pop(position)
     print("This is the position to delete: ",position)
     return jsonify(todos)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
